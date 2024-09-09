@@ -1,0 +1,36 @@
+EXPERIMENT NO: 01
+NAME: Kalyani Kiran Patil
+ROLL NO: 3092
+PROBLEM STATEMENT: Implement of the simple substitution technique named Caesar Cipher
+using C language.
+Code:
+#include <stdio.h>
+#include<stdlib.h>
+#include <string.h>
+char* encrypt(char* message, int key) {
+char* encrypted = (char*)malloc(strlen(message) + 1);
+for (int i = 0; i < strlen(message); i++) {
+if (message[i] >= 'A' && message[i] <= 'Z') {
+encrypted[i] = (message[i] - 'A' + key) % 26 + 'A';
+} else if (message[i] >= 'a' && message[i] <= 'z') {
+encrypted[i] = (message[i] - 'a' + key) % 26 + 'a';
+} else {
+encrypted[i] = message[i];
+}
+}
+encrypted[strlen(message)] = '\0';
+return encrypted;
+}
+int main() {
+char message[100];
+printf("Enter the string: ");
+scanf("%s", message);
+int key;
+printf("Enter the key:");
+scanf("%d",&key);
+printf("Decrypted message: %s\n", message);
+char* encrypted = encrypt(message, key);
+printf("Encrypted message: %s\n", encrypted);
+return 0;
+}
+OUTPUT:
