@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 import PyPDF2
 import os
 import fitz
@@ -68,8 +68,8 @@ def pdf_manager(request):
                 rotate_pages_helper(pdf_paths[0], output_path, rotation)
 
             case 'read_metadata':
-                read_metadata_helper(pdf_paths[0])
-                return HttpResponse("Metadata displayed in the console.")
+                
+                return HttpResponse(read_metadata_helper(pdf_paths[0]))
 
             case 'add_metadata':
                 title = request.POST.get('title')
@@ -166,9 +166,19 @@ def rotate_pages_helper(input_pdf, output_pdf, rotation):
 def read_metadata_helper(input_pdf):
     pdf_reader = PyPDF2.PdfReader(input_pdf)
     metadata = pdf_reader.metadata
+    response_content = "<html><body>"
+    response_content += "<h1>PDF Metadata</h1>"
+    response_content += "<ul>"
+    
     for key, value in metadata.items():
-        print(f"{key}: {value}")
-
+        response_content += f"<li><strong>{key}:</strong> {value}</li>"
+    
+    response_content += "</ul>"
+    response_content += "</body></html>"
+    
+    # Return metadata as an HTML response
+    return HttpResponse(response_content, content_type='text/html')
+    
 def add_metadata_helper(input_pdf, output_pdf, title, author):
     pdf_reader = PyPDF2.PdfReader(input_pdf)
     pdf_writer = PyPDF2.PdfWriter()

@@ -1,36 +1,136 @@
-EXPERIMENT NO: 01
-NAME: Kalyani Kiran Patil
-ROLL NO: 3092
-PROBLEM STATEMENT: Implement of the simple substitution technique named Caesar Cipher
-using C language.
-Code:
-#include <stdio.h>
-#include<stdlib.h>
-#include <string.h>
-char* encrypt(char* message, int key) {
-char* encrypted = (char*)malloc(strlen(message) + 1);
-for (int i = 0; i < strlen(message); i++) {
-if (message[i] >= 'A' && message[i] <= 'Z') {
-encrypted[i] = (message[i] - 'A' + key) % 26 + 'A';
-} else if (message[i] >= 'a' && message[i] <= 'z') {
-encrypted[i] = (message[i] - 'a' + key) % 26 + 'a';
-} else {
-encrypted[i] = message[i];
-}
-}
-encrypted[strlen(message)] = '\0';
-return encrypted;
-}
-int main() {
-char message[100];
-printf("Enter the string: ");
-scanf("%s", message);
-int key;
-printf("Enter the key:");
-scanf("%d",&key);
-printf("Decrypted message: %s\n", message);
-char* encrypted = encrypt(message, key);
-printf("Encrypted message: %s\n", encrypted);
-return 0;
-}
-OUTPUT:
+International Journal of Trend in Research and Development, Volume 3(2), ISSN: 2394-9333
+www.ijtrd.com
+An Investigation Report on Failure of Building
+Foundations
+1Akashdeep Nandi, 2Neeteesh Kumar, 3Abhishek Mazumdar,
+1,2,3Department of Civil Engineering, Chhattisgarh Swami Vivekanand Technical University, Bhilai, Chhattisgarh, India
+Abstract: The construction site is located just ahead of
+II. FAILURE OF FOUNDATION
+Shri Shankaracharya Mahavidyalaya, Junwani, Bhilai.
+During the pre-construction of foundation, shear failure Failure of foundation can cause the building to collapse.
+occurred in the soil which resulted in settlement of Foundation is the first term element of a building where
+foundation, development of cracks and various other the construction starts, but when it falls it can cause many
+problems. Movement and distress in low rise building defects in the structure including failure or collapse of the
+most commonly occur due to the interaction between the structure. Repair of defects in foundation are most
+footing system and the ground. This summarizes the study difficult and very costly, so it is most important to
+that is carried out to assess the possible causes of risk in understand the types of foundation failure to avoid them
+the G+1 residential building founded on pile foundation. by taking necessary steps before the construction starts.
+Keywords: Foundations, Footings, Failure, Footings, Soil The design of structures should satisfy three fundamental
+mechanics, Shear stress, Shear Strains. requirements:
+I. INTRODUCTION 1. Stability: The structure should be stable under the
+action of loads.
+A foundations is the component of an Architectural
+2. Strength: The structure should resist safely stresses
+structure which connects it to the ground, and transfers the
+induced by the loads.
+load from structure to the ground. Foundations are
+3. Serviceability: The structure should perform
+generally considered, either Shallow or Deep. Foundation
+satisfactorily under service loads.
+Engineering is the application of Soil mechanics and Rock
+mechanics (Geotechnical Engineering) in the design of The main causes of failure of foundations are as follows:
+foundation element of structures. Foundations are
+1. Unequal settlement of the sub-soil
+primarily required to support building construction. The
+2. Unequal settlement of the masonry
+foundation is that portion of a structure that transfers the
+3. Withdrawal of moisture from the sub- soil
+loads from the building to the underlying foundation
+4. Lateral pressure on the superstructures
+material.
+5. Lateral movement of the sub-soil
+There are two major requirements to be satisfied in the
+6. Weathering of sub-soil due to Transpiration of trees
+design of foundations:
+and shrubs
+1. Provision of an adequate factor of safety against
+7. Atmospheric action.
+failure of the foundation material. Failure of the
+III. EVALUATION OF SOIL STRENGTH
+foundation material may lead to failure of the
+foundation and may also lead to failure of the entire The soil mass can be evaluated by determining the
+structure. following aspects of the soil component:-
+2. Adequate provision against damage to the structure
+1. Bearing strength of soil
+which may be caused by total or differential
+settlements of the foundations. 2. Penetration Strength of soil
+IJTRD | Mar - Apr 2016
+Available Online@www.ijtrd.com 397
+International Journal of Trend in Research and Development, Volume 3(2), ISSN: 2394-9333
+www.ijtrd.com
+3. Shear strength of soil 2. Triaxial shear test
+3. Vane shear test
+A. Bearing strength of soil
+4. Unconfined compression test.
+Bearing capacity is the power of foundation soil to hold
+b. Penetration test
+the forces from the superstructure without undergoing
+1. California Bearing Ratio (CBR) Test
+shear failure or excessive settlement. Foundation soil is
+that portion of ground which is subjected to additional c. Bearing test
+stresses when foundation and superstructure are 1. Plate Load test.
+constructed on the ground. d. Group Index Test.
+B. Penetration strength test of soil V. PREVENTIVE MEASURES AGAINST
+FOUNDATION FAILURE
+The main purpose of the test is to provide an indication of
+the relative density of granular deposits, such - Lowering water table
+as sands and gravels from which it is virtually impossible
+- Pre-loading
+to obtain undisturbed samples. The great merit of the test,
+- Drive pile to rock
+and the main reason for its widespread use is that it is
+- Compaction
+simple and inexpensive. The soil strength parameters
+which can be inferred are approximate, but may give a - Use of deep foundations
+useful guide in ground conditions where it may not be - Treat or stabilize soil
+possible to obtain borehole samples of adequate quality - Maintain constant water table
+like gravels, sands, silts, clay containing sand or gravel
+- Maintain constant water table
+and weak rock. In conditions where the quality of the
+- Include swell pressure in design
+undisturbed sample is suspect, e.g., very silty or very
+sandy clays, or hard clays, it is often advantageous to
+Acknowledgment
+alternate the sampling with standard penetration tests to
+check the strength. The student contributors would like to thank Ms. Aparna
+Shelare, Assistant Professor in Shri Shankaracharya
+C. Shear strength of soil
+Group of Institution, Bhilai, for her guidance in our
+Shear strength is a term used in soil mechanics to
+entitled work.
+delineate the extent of the shear stress that a soil can
+CONCLUSION
+sustain. The shear resistance of soil is a result of friction
+and interlocking of particles, and possibly adherence or After analyzing the various foundations and processing
+bonding at particle contacts. Due to interlocking, them into the decision matrix, Bored pile foundations
+particulate material may expand or contract in volume as appear to be the most suitable, however there is very little
+it is subject to shear strains. If soil expands its volume, the information known at this stage and it would be possible
+density of particles will decrease and the strength will to use raft, driven piles or bored piles on such a project.
+decrease; in this case, the peak strength would be followed Strip and pad foundation would not be suitable sue to
+by a reduction of shear stress. The stress-strain land, size of building and loads the foundations would
+relationship levels off when the material stops expanding have to cope with. Raft foundation although used mainly
+or contracting, and when interparticle bonds are ruptured. for light weight structures could be designed to cope with
+The theoretical state at which the shear stress and density greater loads.
+remain constant while the shear strain increases may be
+References
+called the critical state, steady state, or residual strength.
+[1] Soil Mechanics; Dr. B.C. Punamia, Ashok K. Jain
+There are three modes of shear failure, i.e. General, Local
+& Arun K. Jain
+and Punching shear failures depending upon the
+[2] Soil Mechanics And Foundation Engg.; V.N.S.
+compressibility of soil and depth of footing with respect to
+Murthy
+its breadth (i.e D/B Ratio).
+[3] Soil Mechanics And Foundation Engg; S.K.Garg
+IV. TESTS FOR EVALUATION OF SOIL [4] Soil Mechanics And Foundation Engg.: Dr S.K.
+STRENGTH Arora
+[5] http://en.m.wikipedia.org/wiki/
+There are various tests carried out for evaluation of soil
+[6] http://theconstructuor.org/
+strength. Generally it is done by -
+[7] http://abuildersengineer.com
+a. Shear test
+1. Direct shear test
+IJTRD | Mar - Apr 2016
+Available Online@www.ijtrd.com 398
